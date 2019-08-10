@@ -12,7 +12,7 @@ necessary_features = np.array(sensor_feature + time_feature)
 
 @app.route("/")
 def hello():
-    return "Hello AIA HC3!"
+    return jsonify("Hello AIA HC3!")
 
 
 @app.route("/xgb/predict/probability", methods=["POST"])
