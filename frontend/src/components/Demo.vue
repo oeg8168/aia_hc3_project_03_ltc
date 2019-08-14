@@ -60,6 +60,9 @@
         </b-col>
 
         <b-col cols="6">
+          <ve-ring :data="chartData"
+                   :settings="chartSettings"
+                   :extend="chartExtend"></ve-ring>
         </b-col>
       </b-row>
     </b-container>
@@ -68,8 +71,11 @@
 </template>
 
 <script>
+import VeRing from "v-charts/lib/ring.common";
+
 export default {
   name: "Demo",
+  components: { VeRing },
   data: function() {
     return {
       isLoading: false,
@@ -120,6 +126,16 @@ export default {
         { value: 5, label: "Friday" },
         { value: 6, label: "Saturday" }
       ],
+
+      chartSettings: {
+        limitShowNum: 5,
+        dataType: "percent",
+        selectedMode: "single"
+      },
+
+      chartExtend: {
+        "tooltip.formatter": "{b}: {d}%"
+      }
     };
   },
   computed: {
@@ -141,6 +157,16 @@ export default {
     },
     submitButtonClass: function() {
       return !this.isLoading && this.canSubmit ? "animated infinite heartBeat" : "";
+    },
+    chartData: function() {
+      return {
+        columns: ["event", "probability"],
+        rows: Object.keys(this.predictResult)
+          .sort((a, b) => this.predictResult[b] - this.predictResult[a])
+          .map(key => {
+            return { event: this.$t(`PREDICT_EVENTS.${key}`), probability: this.predictResult[key] };
+          })
+      };
     }
   },
   methods: {
