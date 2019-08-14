@@ -8,6 +8,8 @@ import App from './App.vue'
 import i18n from './i18n'
 import './plugins/element.js'
 
+import 'animate.css'
+
 Vue.config.productionTip = false
 
 new Vue({

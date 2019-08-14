@@ -1,3 +1,28 @@
 {
+  "TIME": {
+    "Date": "日期",
+    "Time": "時間",
+    "Sunday": "星期日",
+    "Monday": "星期一",
+    "Tuesday": "星期二",
+    "Wednesday": "星期三",
+    "Thursday": "星期四",
+    "Friday": "星期五",
+    "Saturday": "星期六"
+  },
 
+  "BUTTON": {
+    "Predict": "預測！"
+  },
+
+  "PREDICT_EVENTS": {
+    "Relax": "放鬆",
+    "Meal_Preparation": "備餐",
+    "Sleeping": "睡覺",
+    "Work": "工作",
+    "Wash_Dishes": "洗碗",
+    "Eating": "吃飯",
+    "Housekeeping": "做家事",
+    "Bed_to_Toilet": "下床上廁所"
+  }
 }
