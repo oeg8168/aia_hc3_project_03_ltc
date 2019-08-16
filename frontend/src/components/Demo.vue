@@ -21,6 +21,18 @@
                          @click="submit()">
                 {{ $t("BUTTON.Predict") }}
               </el-button>
+
+              <el-button type="info"
+                         size="medium"
+                         @click="getRandomSensorCounts(5)">
+                {{ $t("BUTTON.RandomSensorCount") }}
+              </el-button>
+
+              <el-button type="info"
+                         size="medium"
+                         @click="resetInputSensorCounts()">
+                {{ $t("BUTTON.ResetSensorCount") }}
+              </el-button>
             </el-form-item>
 
             <hr>
@@ -184,6 +196,13 @@ export default {
 
         this.resetInputSensorCounts();
       });
+    },
+    getRandomSensorCounts: function(n) {
+      const keys = Object.keys(this.inputSensorCounts);
+      for (var i = 0; i < n; i++) {
+        const randomKey = keys[Math.floor(Math.random() * keys.length)];
+        this.inputSensorCounts[randomKey] = Math.round(Math.random() * 100);
+      }
     },
     resetInputSensorCounts: function() {
       Object.keys(this.inputSensorCounts).forEach(key => (this.inputSensorCounts[key] = 0));

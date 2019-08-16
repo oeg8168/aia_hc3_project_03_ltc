@@ -12,7 +12,9 @@
   },
 
   "BUTTON": {
-    "Predict": "預測！"
+    "Predict": "預測！",
+    "RandomSensorCount": "隨機",
+    "ResetSensorCount": "重設"
   },
 
   "PREDICT_EVENTS": {
