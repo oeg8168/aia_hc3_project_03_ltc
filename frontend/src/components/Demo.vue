@@ -50,11 +50,10 @@
             <el-form-item v-for="i in Object.keys(inputSensorCounts)"
                           v-bind:key="`inputSensorCounts-${i}`"
                           :label="i">
-              <el-input-number v-model="inputSensorCounts[i]"
-                               size="mini"
-                               :min="0"
-                               :max="10">
-              </el-input-number>
+              <el-slider v-model="inputSensorCounts[i]"
+                         :min="0"
+                         :max="100">
+              </el-slider>
             </el-form-item>
           </el-form>
         </b-col>
