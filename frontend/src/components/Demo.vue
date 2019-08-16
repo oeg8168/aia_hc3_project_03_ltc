@@ -193,11 +193,11 @@ export default {
       axios.post("xgb/predict/probability", inputData).then(response => {
         this.isLoading = false;
         this.predictResult = response.data;
-
-        this.resetInputSensorCounts();
       });
     },
     getRandomSensorCounts: function(n) {
+      this.resetInputSensorCounts();
+
       const keys = Object.keys(this.inputSensorCounts);
       for (var i = 0; i < n; i++) {
         const randomKey = keys[Math.floor(Math.random() * keys.length)];
