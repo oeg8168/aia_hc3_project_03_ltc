@@ -1,8 +1,11 @@
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 model = np.load("./model_XGB.pickle", allow_pickle=True)
 
 sensor_feature = [f"M{i:03d}" for i in range(1, 32)]
