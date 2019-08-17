@@ -1,5 +1,18 @@
 <template>
   <div id="app">
+    <b-navbar type="dark"
+              variant="info"
+              :sticky="true">
+      <b-navbar-brand to="/">
+        <font-awesome-icon icon="rocket" />&nbsp;{{ $t("PAGE.Title") }}
+      </b-navbar-brand>
+
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item to="/demo">{{ $t("PAGE.NAV.Demo") }}</b-nav-item>
+        <b-nav-item to="/about">{{ $t("PAGE.NAV.About") }}</b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
+
     <transition name="fade">
       <router-view></router-view>
     </transition>
