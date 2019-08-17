@@ -5,6 +5,15 @@
     "NAV": {
       "Demo": "情境展示",
       "About": "關於"
+    },
+
+    "ABOUT": {
+      "Title": "關於",
+      "SUBTITLE": {
+        "Author": "作者",
+        "Tech_Stack": "技術",
+        "Special_Thank": "特別感謝"
+      }
     }
   },
 
