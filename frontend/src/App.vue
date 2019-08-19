@@ -2,6 +2,7 @@
   <div id="app">
     <b-navbar type="dark"
               variant="info"
+              class="font-weight-bold mb-3"
               :sticky="true">
       <b-navbar-brand to="/">
         <font-awesome-icon icon="rocket" />&nbsp;{{ $t("PAGE.Title") }}
@@ -13,7 +14,8 @@
       </b-navbar-nav>
     </b-navbar>
 
-    <transition name="fade">
+    <transition name="fade"
+                mode="out-in">
       <router-view></router-view>
     </transition>
   </div>
@@ -24,11 +26,19 @@ import Demo from "./components/Demo.vue";
 
 export default {
   name: "app",
-  components: { Demo }
+  components: { Demo },
+  created: function() {
+    document.title = this.$t("PAGE.Title");
+  }
 };
 </script>
 
 <style lang="scss">
+body {
+  user-select: none;
+  overflow-y: scroll;
+}
+
 #app {
   font-family: "微軟正黑體", "Microsoft JhengHei", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
