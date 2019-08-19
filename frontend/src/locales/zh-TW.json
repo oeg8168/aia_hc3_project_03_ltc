@@ -7,6 +7,14 @@
       "About": "關於"
     },
 
+    "INTRO": {
+      "Title": "簡介"
+    },
+
+    "DEMO": {
+      "Title": "情境展示",
+    },
+
     "ABOUT": {
       "Title": "關於",
       "SUBTITLE": {

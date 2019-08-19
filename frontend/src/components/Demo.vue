@@ -1,6 +1,8 @@
 <template>
   <div class="demo">
 
+    <h3 class="pl-5 mb-3">{{ $t('PAGE.DEMO.Title') }}</h3>
+
     <b-container fluid>
       <b-row align-h="center">
         <p class="text-center">
