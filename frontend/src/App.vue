@@ -45,6 +45,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s linear;
