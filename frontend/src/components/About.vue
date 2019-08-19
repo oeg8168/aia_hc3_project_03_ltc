@@ -1,7 +1,7 @@
 <template>
   <div class="about">
 
-    <h3 class="pl-5 mb-3">{{ $t('PAGE.NAV.About') }}</h3>
+    <h3 class="pl-5 mb-3">{{ $t('PAGE.ABOUT.Title') }}</h3>
 
     <b-container fluid>
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Author") }}</el-divider>
@@ -64,9 +64,27 @@
         </b-col>
       </b-row>
 
+      <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Dataset") }}</el-divider>
+      <b-row align-h="center"
+             align-v="center"
+             class="mb-5">
+        <b-col cols="5">
+          <a target="_blank"
+             href="http://casas.wsu.edu/">
+            <b-img :src="require('@/assets/logo-casas.jpg')"
+                   alt="CASAS"
+                   title="CASAS"
+                   class="logo-dataset"
+                   center
+                   fluid></b-img>
+          </a>
+        </b-col>
+      </b-row>
+
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Special_Thank") }}</el-divider>
       <b-row align-h="center"
-             align-v="center">
+             align-v="center"
+             class="mb-5">
         <b-col cols="4">
           <a target="_blank"
              href="https://aiacademy.tw/">
