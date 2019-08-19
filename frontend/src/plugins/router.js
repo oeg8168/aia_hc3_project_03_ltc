@@ -7,7 +7,7 @@ import About from '@/components/About'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
   routes: [
     { path: '/', redirect: '/intro' },
     { path: '/intro', component: Intro },
@@ -15,3 +15,9 @@ export default new VueRouter({
     { path: '/about', component: About }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  to.matched.length > 0 ? next() : next(false);
+})
+
+export default router
