@@ -1,7 +1,21 @@
 <template>
   <div class="demo">
 
-    <h3 class="pl-5 mb-3">{{ $t('PAGE.DEMO.Title') }}</h3>
+    <h3 class="pl-5 mb-3">
+      {{ $t('PAGE.DEMO.Title') }}
+      <el-popover placement="right"
+                  width="300"
+                  trigger="hover"
+                  :open-delay="500">
+        <p v-for="tooltip in $t('PAGE.DEMO.TOOLTIPS')"
+           :key="tooltip">
+          {{ tooltip }}
+        </p>
+        <font-awesome-icon slot="reference"
+                           icon="question-circle"
+                           class="fa-xs tooltip-icon"></font-awesome-icon>
+      </el-popover>
+    </h3>
 
     <b-container fluid>
       <b-row align-h="center">
@@ -293,6 +307,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tooltip-icon {
+  cursor: help;
+  color: lightgray;
+}
+
 .el-button {
   font-weight: bold;
 }

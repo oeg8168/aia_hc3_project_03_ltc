@@ -35,12 +35,13 @@ export default {
 
 <style lang="scss">
 body {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "Avenir", Helvetica, Arial, sans-serif;
+
   user-select: none;
   overflow-y: scroll;
 }
 
 #app {
-  font-family: "微軟正黑體", "Microsoft JhengHei", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
