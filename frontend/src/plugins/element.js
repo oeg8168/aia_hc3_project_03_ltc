@@ -2,6 +2,8 @@ import Vue from 'vue'
 import {
   Card,
   Divider,
+  Collapse,
+  CollapseItem,
   Link,
   Form,
   FormItem,
@@ -21,6 +23,8 @@ locale.use(lang)
 
 Vue.use(Card)
 Vue.use(Divider)
+Vue.use(Collapse)
+Vue.use(CollapseItem)
 Vue.use(Link)
 Vue.use(Form)
 Vue.use(FormItem)

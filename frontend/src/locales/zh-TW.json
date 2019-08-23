@@ -8,7 +8,47 @@
     },
 
     "INTRO": {
-      "Title": "簡介"
+      "Title": "簡介",
+      "PARAGARPHS": {
+        "OBJECTIVE": {
+          "SUBTITLE": "目的 Objective",
+          "CONTENTS": [
+            "由於現代醫學的發達，人類平均壽命延長，高齡人口比例逐漸攀升，年長者的照護已成為各國相當重視的議題。",
+            "因此，有關年長者行為模式的研究便是我們關心的重點。",
+            "本專題利用Washington State University Center for Advanced Studiesin Adaptive Systems(簡稱WSU CASAS)的資料集中，於一位年長女性志願者家中所蒐集的行為資料集進行訓練與預測。"
+          ]
+        },
+
+        "INTRODUCTION": {
+          "SUBTITLE": "引言 Introduction",
+          "CONTENTS": [
+            "WSU CASAS的資料集之行為數據包含時間、感應器名稱、是否觸發感應器、行為註記以及感應器佈點位置圖。",
+            "經資料清理後，需分析、預測之行為共有8類，分別為：",
+            "　(1) 備餐、(2) 放鬆、(3) 吃飯、(4) 工作、(5) 睡覺、(6) 洗碗、(7) 下床上廁所、(8) 做家事"
+          ]
+        },
+
+        "METHOD": {
+          "SUBTITLE": "方法 Method",
+          "CONTENTS": []
+        },
+
+        "RESULT": {
+          "SUBTITLE": "成果 Result",
+          "CONTENTS": []
+        },
+
+        "CONCLUSION": {
+          "SUBTITLE": "結論 Conclusion",
+          "CONTENTS": [
+            "經過實作後發現：",
+            "　(1) 使用感應器的觸發次數加上時間特徵並利用XGBoost訓練",
+            "　(2) 將行為路徑分別繪製成圖再利用CNN - InceptionResNetV2進行訓練",
+            "以上兩種方法在驗證資料上的準確度皆能達到96%以上。",
+            "從結果可以確認感應器蒐集的行為資料集能夠在後期進行分析及預測，未來可再更進一步進行研究。若能取得更精確的室內定位資料（例如使用UWB定位技術），在事件判斷的準確度與精密度上必能有所提升，藉以達成更廣泛的AI加值應用。"
+          ]
+        }
+      }
     },
 
     "DEMO": {
