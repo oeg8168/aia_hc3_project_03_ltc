@@ -84,7 +84,7 @@
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Special_Thank") }}</el-divider>
       <b-row align-h="center"
              align-v="center"
-             class="mb-5">
+             class="mb-3">
         <b-col cols="4">
           <a target="_blank"
              href="https://aiacademy.tw/">
@@ -97,6 +97,24 @@
           </a>
         </b-col>
       </b-row>
+
+      <div class="text-center text-muted font-weight-light mb-3">
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik"
+           class="text-reset"
+           title="Freepik"
+           target="_blank">Freepik</a>
+        from
+        <a href="https://www.flaticon.com/"
+           class="text-reset"
+           title="Flaticon"
+           target="_blank">www.flaticon.com</a>
+        is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/"
+           class="text-reset"
+           title="Creative Commons BY 3.0"
+           target="_blank">CC 3.0 BY</a>
+      </div>
     </b-container>
 
   </div>
