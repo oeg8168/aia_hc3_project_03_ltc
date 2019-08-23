@@ -109,7 +109,7 @@
 
             <el-button type="info"
                        size="medium"
-                       @click="resetInputSensorCounts()">
+                       @click="reset()">
               {{ $t("BUTTON.ResetSensorCount") }}
             </el-button>
           </div>
@@ -289,6 +289,11 @@ export default {
         this.isLoading = false;
         this.predictResult = response.data;
       });
+    },
+    reset: function() {
+      this.predictResult = {};
+      this.$refs.map.mapObject.fitBounds([[0, 0], [this.mapInfo.actualHeight, this.mapInfo.actualWidth]]);
+      this.resetInputSensorCounts();
     },
     getRandomSensorCounts: function(n) {
       this.resetInputSensorCounts();
