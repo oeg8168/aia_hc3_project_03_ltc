@@ -46,8 +46,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.el-scrollbar__wrap {
-  overflow-x: hidden;
+.el-card__body {
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
 }
 
 .fade-enter-active,
