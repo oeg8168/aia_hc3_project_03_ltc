@@ -6,13 +6,13 @@
     <b-container fluid>
       <b-row align-h="center"
              align-v="center">
-        <b-col cols="3">
+        <b-col md="3">
           <b-img :src="introIcon"
-                 class="animated slower pulse infinite w-75"
+                 class="animated slower pulse infinite w-75 my-3"
                  center
                  fluid></b-img>
         </b-col>
-        <b-col cols="7">
+        <b-col md="7">
           <el-card :body-style="{ height:'70vh' }">
             <el-scrollbar class="h-100">
               <el-collapse v-model="activeCollapseItem"

@@ -6,11 +6,11 @@
     <b-container fluid>
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Author") }}</el-divider>
       <b-row align-h="center"
-             align-v="center"
-             class="mb-5">
+             align-v="center">
         <b-col v-for="author in authors"
                :key="author.name"
-               cols="3">
+               md="3"
+               class="mb-3">
           <el-card shadow="hover">
             <div slot="header"
                  class="author-card-header">
@@ -47,11 +47,11 @@
 
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Tech_Stack") }}</el-divider>
       <b-row align-h="center"
-             align-v="center"
-             class="mb-5">
+             align-v="center">
         <b-col v-for="tech in techStacks"
                :key="tech.name"
-               cols="2">
+               md="2"
+               class="mb-3">
           <a target="_blank"
              :href="tech.link">
             <b-img :src="tech.image"
@@ -66,9 +66,9 @@
 
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Dataset") }}</el-divider>
       <b-row align-h="center"
-             align-v="center"
-             class="mb-5">
-        <b-col cols="5">
+             align-v="center">
+        <b-col md="5"
+               class="mb-3">
           <a target="_blank"
              href="http://casas.wsu.edu/">
             <b-img :src="require('@/assets/logo-casas.jpg')"
@@ -83,9 +83,9 @@
 
       <el-divider>{{ $t("PAGE.ABOUT.SUBTITLE.Special_Thank") }}</el-divider>
       <b-row align-h="center"
-             align-v="center"
-             class="mb-3">
-        <b-col cols="4">
+             align-v="center">
+        <b-col md="4"
+               class="mb-3">
           <a target="_blank"
              href="https://aiacademy.tw/">
             <b-img :src="require('@/assets/logo-aia.png')"

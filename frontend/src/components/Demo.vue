@@ -3,8 +3,7 @@
 
     <h3 class="pl-5 mb-3">
       {{ $t('PAGE.DEMO.Title') }}
-      <el-popover placement="right"
-                  width="300"
+      <el-popover width="300"
                   trigger="hover"
                   :open-delay="500">
         <p v-for="tooltip in $t('PAGE.DEMO.TOOLTIPS')"
@@ -19,9 +18,10 @@
 
     <b-container fluid>
       <b-row align-h="center">
-        <b-col cols="3">
+        <b-col md="3"
+               class="mb-3">
           <el-card v-loading="isLoading"
-                   :body-style="{height:'60vh'}">
+                   :body-style="{height:'55vh'}">
             <div slot="header">
               <el-form class="mr-3"
                        label-width="25%">
@@ -67,9 +67,10 @@
           </el-card>
         </b-col>
 
-        <b-col cols="5">
+        <b-col md="5"
+               class="mb-3">
           <el-card class="mb-3"
-                   :body-style="{height:'70vh'}">
+                   :body-style="{height:'65vh'}">
             <l-map ref="map"
                    :crs="mapOptions.crs"
                    :minZoom="mapOptions.minZoom"
@@ -115,9 +116,10 @@
           </div>
         </b-col>
 
-        <b-col cols="4">
+        <b-col md="4"
+               class="mb-3">
           <el-card v-loading="isLoading"
-                   :body-style="{height:'70vh'}">
+                   :body-style="{height:'65vh'}">
             <p>{{ $t('PAGE.DEMO.PredictResult') }}</p>
             <hr>
             <ve-ring height="85%"
@@ -151,7 +153,7 @@ export default {
       mapOptions: {
         crs: L.CRS.Simple,
 
-        minZoom: -1,
+        minZoom: -2,
         maxZoom: 2,
 
         others: {

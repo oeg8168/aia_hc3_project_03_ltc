@@ -13,7 +13,14 @@ const router = new VueRouter({
     { path: '/intro', component: Intro },
     { path: '/demo', component: Demo },
     { path: '/about', component: About }
-  ]
+  ],
+  scrollBehavior: function(to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ x: 0, y: 0 })
+      }, 200)
+    })
+  }
 })
 
 router.beforeEach((to, from, next) => {
