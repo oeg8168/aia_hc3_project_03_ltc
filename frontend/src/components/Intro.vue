@@ -42,6 +42,10 @@
                         class="font-weight-bold">
                     {{ intro.method.subtitle }}
                   </span>
+                  <p v-for="part in intro.method.paragraphs"
+                     :key="part">
+                    {{ part }}
+                  </p>
                   <b-img :src="require('@/assets/intro-methods.png')"
                          class="pr-3"
                          center
@@ -52,6 +56,10 @@
                         class="font-weight-bold">
                     {{ intro.result.subtitle }}
                   </span>
+                  <p v-for="part in intro.result.paragraphs"
+                     :key="part">
+                    {{ part }}
+                  </p>
                   <b-img :src="require('@/assets/intro-results.png')"
                          class="pr-3"
                          center
