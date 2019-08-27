@@ -78,11 +78,20 @@
                    :minZoom="mapOptions.minZoom"
                    :maxZoom="mapOptions.maxZoom"
                    :options="mapOptions.others">
-              <l-control-zoom></l-control-zoom>
+              <l-control-zoom position="bottomleft"></l-control-zoom>
 
               <l-image-overlay :url="mapInfo.url"
                                :bounds="[[0,0], [mapInfo.actualHeight, mapInfo.actualWidth]]">
               </l-image-overlay>
+
+              <l-marker v-for="s in sensorDots"
+                        :key="`sensor-name-${s.name}`"
+                        :icon-anchor="[0, 0]"
+                        :lat-lng="[s.y, s.x]">
+                <l-icon>
+                  <span class="font-weight-bold text-center">{{ `·${s.name}` }}</span>
+                </l-icon>
+              </l-marker>
 
               <l-circle v-for="s in sensorDots"
                         :key="s.name"
@@ -139,14 +148,14 @@
 
 <script>
 import "leaflet/dist/leaflet.css";
-import { LMap, LImageOverlay, LControlZoom, LCircle } from "vue2-leaflet";
+import { LMap, LImageOverlay, LControlZoom, LCircle, LMarker, LIcon } from "vue2-leaflet";
 
 import VeRing from "v-charts/lib/ring.common";
 import SensorPositions from "../assets/sensors.json";
 
 export default {
   name: "Demo",
-  components: { LMap, LImageOverlay, LControlZoom, LCircle, VeRing },
+  components: { LMap, LImageOverlay, LControlZoom, LCircle, LMarker, LIcon, VeRing },
   data: function() {
     return {
       sensors: SensorPositions,
@@ -167,7 +176,7 @@ export default {
       },
 
       mapInfo: {
-        url: require("@/assets/map.jpg"),
+        url: require("@/assets/map-with-text.png"),
         actualHeight: 450,
         actualWidth: 660
       },
