@@ -176,7 +176,7 @@ export default {
       },
 
       mapInfo: {
-        url: require("@/assets/map-with-text.png"),
+        url: require("@/assets/image/map-with-text.png"),
         actualHeight: 450,
         actualWidth: 660
       },

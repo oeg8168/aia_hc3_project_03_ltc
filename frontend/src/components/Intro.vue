@@ -31,12 +31,12 @@
                   </p>
 
                   <b-img v-if="introKey==='method'"
-                         :src="require('@/assets/intro-methods.png')"
+                         :src="require('@/assets/image/intro/intro-methods.png')"
                          class="pr-3"
                          center
                          fluid></b-img>
                   <b-img v-if="introKey==='result'"
-                         :src="require('@/assets/intro-results.png')"
+                         :src="require('@/assets/image/intro/intro-results.png')"
                          class="pr-3"
                          center
                          fluid></b-img>
@@ -91,17 +91,17 @@ export default {
     introIcon: function() {
       switch (this.activeCollapseItem) {
         case "objective":
-          return require("@/assets/intro-icon-objective.png");
+          return require("@/assets/image/intro/icon/intro-icon-objective.png");
         case "introduction":
-          return require("@/assets/intro-icon-introduction.png");
+          return require("@/assets/image/intro/icon/intro-icon-introduction.png");
         case "method":
-          return require("@/assets/intro-icon-method.png");
+          return require("@/assets/image/intro/icon/intro-icon-method.png");
         case "result":
-          return require("@/assets/intro-icon-result.png");
+          return require("@/assets/image/intro/icon/intro-icon-result.png");
         case "conclusion":
-          return require("@/assets/intro-icon-conclusion.png");
+          return require("@/assets/image/intro/icon/intro-icon-conclusion.png");
         default:
-          return require("@/assets/intro-icon-default.png");
+          return require("@/assets/image/intro/icon/intro-icon-default.png");
       }
     }
   },

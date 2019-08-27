@@ -71,7 +71,7 @@
                class="mb-3">
           <a target="_blank"
              href="http://casas.wsu.edu/">
-            <b-img :src="require('@/assets/logo-casas.jpg')"
+            <b-img :src="require('@/assets/image/logo/logo-casas.jpg')"
                    alt="CASAS"
                    title="CASAS"
                    class="logo-dataset"
@@ -88,7 +88,7 @@
                class="mb-3">
           <a target="_blank"
              href="https://aiacademy.tw/">
-            <b-img :src="require('@/assets/logo-aia.png')"
+            <b-img :src="require('@/assets/image/logo/logo-aia.png')"
                    alt="Taiwan AI Academy"
                    title="Taiwan AI Academy"
                    class="logo-special-thank"
@@ -143,27 +143,27 @@ export default {
       techStacks: [
         {
           name: "Vue.js",
-          image: require("@/assets/logo-vue.png"),
+          image: require("@/assets/image/logo/logo-vue.png"),
           link: "https://vuejs.org/"
         },
         {
           name: "Python",
-          image: require("@/assets/logo-python.png"),
+          image: require("@/assets/image/logo/logo-python.png"),
           link: "https://www.python.org/"
         },
         {
           name: "Flask",
-          image: require("@/assets/logo-flask.png"),
+          image: require("@/assets/image/logo/logo-flask.png"),
           link: "https://flask.palletsprojects.com"
         },
         {
           name: "XGBoost",
-          image: require("@/assets/logo-xgboost.png"),
+          image: require("@/assets/image/logo/logo-xgboost.png"),
           link: "https://github.com/dmlc/xgboost"
         },
         {
           name: "App Engine",
-          image: require("@/assets/logo-app_engine.png"),
+          image: require("@/assets/image/logo/logo-app_engine.png"),
           link: "https://cloud.google.com/appengine/"
         }
       ]
