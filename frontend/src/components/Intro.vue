@@ -17,63 +17,29 @@
             <el-scrollbar class="h-100">
               <el-collapse v-model="activeCollapseItem"
                            accordion>
-                <el-collapse-item :name="intro.objective.name">
+                <el-collapse-item v-for="introKey in Object.keys(intro)"
+                                  :key="introKey"
+                                  :name="intro[introKey].name">
+
                   <span slot="title"
                         class="font-weight-bold">
-                    {{ intro.objective.subtitle }}
+                    {{ intro[introKey].subtitle }}
                   </span>
-                  <p v-for="part in intro.objective.paragraphs"
+                  <p v-for="part in intro[introKey].paragraphs"
                      :key="part">
                     {{ part }}
                   </p>
-                </el-collapse-item>
-                <el-collapse-item :name="intro.introduction.name">
-                  <span slot="title"
-                        class="font-weight-bold">
-                    {{ intro.introduction.subtitle }}
-                  </span>
-                  <p v-for="part in intro.introduction.paragraphs"
-                     :key="part">
-                    {{ part }}
-                  </p>
-                </el-collapse-item>
-                <el-collapse-item :name="intro.method.name">
-                  <span slot="title"
-                        class="font-weight-bold">
-                    {{ intro.method.subtitle }}
-                  </span>
-                  <p v-for="part in intro.method.paragraphs"
-                     :key="part">
-                    {{ part }}
-                  </p>
-                  <b-img :src="require('@/assets/intro-methods.png')"
+
+                  <b-img v-if="introKey==='method'"
+                         :src="require('@/assets/intro-methods.png')"
                          class="pr-3"
                          center
                          fluid></b-img>
-                </el-collapse-item>
-                <el-collapse-item :name="intro.result.name">
-                  <span slot="title"
-                        class="font-weight-bold">
-                    {{ intro.result.subtitle }}
-                  </span>
-                  <p v-for="part in intro.result.paragraphs"
-                     :key="part">
-                    {{ part }}
-                  </p>
-                  <b-img :src="require('@/assets/intro-results.png')"
+                  <b-img v-if="introKey==='result'"
+                         :src="require('@/assets/intro-results.png')"
                          class="pr-3"
                          center
                          fluid></b-img>
-                </el-collapse-item>
-                <el-collapse-item :name="intro.conclusion.name">
-                  <span slot="title"
-                        class="font-weight-bold">
-                    {{ intro.conclusion.subtitle }}
-                  </span>
-                  <p v-for="part in intro.conclusion.paragraphs"
-                     :key="part">
-                    {{ part }}
-                  </p>
                 </el-collapse-item>
               </el-collapse>
             </el-scrollbar>
